@@ -7,6 +7,7 @@
 				<div class="page-title text-center">
 					<div class="col-12 col-sm-10 col-lg-6 mx-auto">
 						<h1 class="mb-0">Contact Us</h1>
+						<h4></h4>
 						<p class="pt-4 pb-3">Duis mollis finibus turpis ac imperdiet. Pellentesque aliquam nec tortor non volutpat. Suspendisse non metus facilisis.</p>
 					</div>
 				</div>
