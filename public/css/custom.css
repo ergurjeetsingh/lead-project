@@ -1,0 +1,56 @@
+/*
+Author Name: Pixinal Studio
+Author Email: info@pixinal.com
+Author URL: https://www.Pixinal.com
+Script Version: v1.4.1
+NB: If changes don't apply, try adding "!important" For example:
+.btn {
+    color: blue !important;
+}
+
+*/
+
+/********** Start Writing Your Own Custom CSS Code Here ***********/
+/********** Moving Service custom Css ***********/
+.moving-items{
+	/*background-image: url('../images/movingbg.jpg');*/
+	padding: 40px 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.service-banner-wrapper{
+	text-align: center;
+}
+.service-banner-wrapper .service-title{
+	font-size: 40px;
+	color: #fff;
+	line-height: 50px;
+	background: #00000070;
+	padding: 5px 10px;
+	display: inline-block;
+	border-radius: 4px;
+}
+@media (max-width: 768px){
+	.service-form-row{
+		padding: 0 5%!important;
+
+	}
+	.service-banner-wrapper .service-title{
+		font-size: 22px;
+		line-height: 32px;
+	}
+
+
+}
+
+.service-form-row{
+	padding: 0 30%;
+	margin-top: 20px;
+}
+.service-form-row .find-service-form{
+	padding: 40px;
+	border: 1px solid #e8e8e8;
+	border-radius: 4px;
+	background-color: #fff;
+}

@@ -1,0 +1,115 @@
+#buyer-navbar {
+    text-align: right;
+    cursor: pointer;
+    padding: 10px;
+    float: right;
+}
+.buyer-menu {
+    float: right;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+    height: 100%;
+    padding-top: 12px;
+}
+
+#buyer-navbar:hover #buyer-nav{
+    display:block;
+}
+#buyer-nav li a{
+    color: #d4d4d4;
+    font-weight: 500;
+    display: block;
+    padding: 4px 20px;
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom:2px;
+}
+#buyer-nav li a:hover{
+    background-color: #465258;
+    color:#ffffff;
+}
+#buyer-nav{
+    display:none;
+    position: absolute;
+    background-color: #3a4449;
+    top: 55px;
+    padding: 10px 2px;
+    border-radius: 5px;
+    text-align: left;
+    z-index:1;
+}
+.buyer-tab-menu{
+    border-bottom:1px solid #e8e8e8;
+}
+.buyer-tab-menu ul li{
+    display:inline-block;
+}
+.buyer-tab-menu ul li a.active{
+    border-bottom:3px solid #616161;
+}
+.buyer-tab-menu ul li a{
+    padding: 10px;
+    display: block;
+    color: #414141;
+    font-size: 16px;
+    line-height: 26px;
+    border-bottom:3px solid #ffffff;
+}
+
+.content-wrapper{
+    padding:10% 0 10% 0;  
+    background: #f3f3f6;
+}
+.leader-box{
+    min-height: 120px;
+    border: 1px solid #EDEFF7;
+    border-radius: 5px;
+    background-color: #FEFEFE;
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,0.02);
+    padding: 1.2em 22px 1.2em;
+}
+
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+/********************************************/
+.buyer-img{
+    display: block;
+    float: left;
+    width: 43px;    
+    border-radius: 50%;
+    margin-right: 5px;
+    height: 35px;
+}
+.buyer-name{
+    display: flex;
+    color: #515151;
+    font-size: 19px;
+    width: auto;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+}
+.buyer-name i{
+    margin-top: 5px;
+}
+/********************************************/
+.project-question{
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0px 1px 7px -1px #d4d4d4;
+    margin-bottom: 10px;
+}
+.project-question .detail-title{
+    font-weight: 500;
+    margin: 0;
+}
+.project-question .answer{
+
+}
