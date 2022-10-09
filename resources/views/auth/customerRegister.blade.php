@@ -3,9 +3,11 @@
 @section('content')    
 <div class="content-wrapper">
 <div class="container">
-   <div class="row">
-      <div class="col-12">
-         <div>
+   <div class="row ">
+      <div class="col-3"></div>
+      <div class="col-6">
+      <h2 class="text-center mb-4">Sign Up To Lead With Us</h2>
+         <div class="p-4 shadow rounded">         
             <form action="" method="post" class="pb-3">
                <div class="form-group">
                   <label class="form-control-label font-weight-bold"> Full Name: </label>
@@ -32,6 +34,7 @@
 
          </div>
       </div>
+      <div class="col-3"></div>
    </div>
 </div>
 </div>

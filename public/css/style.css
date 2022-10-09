@@ -34,9 +34,9 @@ h6,
 }
 /*common css*/
 .btn-success {
-    color: #fff;
-    background-color: #f8981d;
-    border-color: #f8981d;
+    color: #fff!important;
+    background-color: #f8981d!important;
+    border-color: #f8981d!important;
 }
 .font-weight-bold {
 	font-weight: 500!important;
@@ -51,7 +51,7 @@ h6,
 /**************Home Page************************/
 
 .text-success{
-	color: #f8981d !important;
+	color: #f8981d!important;
 }
 .home-section {
 	padding: 70px 0 0 0;
@@ -745,7 +745,7 @@ header .input-group {
 		overflow-y:auto;
 		position:relative;
 		width:70% !important;*/
-	;
+	
 }
 
 .container .list-inline-item .new-indicator {
@@ -989,7 +989,7 @@ header hr {
 
 .main .input-group .form-control:not(:last-child) {
 	/*border-radius: 4px;*/
-	;
+	
 }
 
 .main .offset-md-3 {
@@ -998,7 +998,7 @@ header hr {
 
 .main .input-group-append {
 	/*margin-left: 6px;*/
-	;
+	
 }
 
 
@@ -1773,12 +1773,12 @@ a.toggle-menu {
 
 	footer ul li a {
 		/*font-size: 12px;*/
-		;
+		
 	}
 
 	footer h3 {
 		/*margin-top: 20px;*/
-		;
+		
 	}
 
 	.social_icon li a {
@@ -3482,7 +3482,7 @@ input:checked+.slider:before {
 }
 
 #seller-vacation-div {
-	background: #fcfc8e3;
+	background: #fcfc8e;
 	border: 1px solid;
 	padding: 12px 20px 20px 20px;
 }
@@ -3493,9 +3493,9 @@ input:checked+.slider:before {
 }
 
 /** Log Out Page **/
-.logout-image {
+/* .logout-image {
 	background: #fcfc8e3;
-}
+} */
 
 /*** Proposals extras ***/
 .border-1 {
@@ -3825,24 +3825,24 @@ input:checked+.slider:before {
 @media only screen and (max-width: 475px) {
 	.card-box {
 		/*width: 235px;*/
-		;
+		
 	}
 
 	.card-box .subcategory img {
 		/*height: 290px;*/
-		;
+		
 	}
 }
 
 @media only screen and (max-width: 420px) {
 	.card-box {
 		/*width: 210px;*/
-		;
+		
 	}
 
 	.card-box .subcategory img {
 		/*height: 275px;*/
-		;
+		
 	}
 }
 
@@ -3851,7 +3851,7 @@ input:checked+.slider:before {
 /*Footer Styles*/
 .footer {
 	/*background: #f1f1f1;*/
-	;
+	
 }
 
 @media (max-width: 1199.98px) {
@@ -4513,8 +4513,6 @@ section.cookies_footer {
 	color: #212121;
 }
 
-
-<style>
 .tick {
   stroke-dasharray: 30px;
   stroke-dashoffset: 30px;
