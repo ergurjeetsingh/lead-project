@@ -34,7 +34,7 @@
                         </div>
                     </form>
                     <div class="text-center mt-3">
-                        <a href="#" data-toggle="modal" data-target="#register-modal">
+                        <a href="/customer-register">
                             <i class="fa fa-user-plus"></i> Sign Up
                         </a>
                         &nbsp; &nbsp; | &nbsp; &nbsp;

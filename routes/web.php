@@ -29,9 +29,9 @@ Route::get('/faq', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
-// Route::get('/customer-login', function () {
-//     return view('pages.customer-login');
-// });
+Route::get('/customer-register', function () {
+    return view('pages.customer-register');
+});
 
 
 Route::get('customer-login', [AuthController::class, 'login'])->name('customerLogin');
