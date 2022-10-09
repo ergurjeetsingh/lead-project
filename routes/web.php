@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect('/home');
+})->name('dashboard');
 Route::get('/home', function () {
     return view('pages.home');
 });
@@ -28,6 +29,10 @@ Route::get('/faq', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
-Route::get('/customer-login', function () {
-    return view('pages.customer-login');
-});
+// Route::get('/customer-login', function () {
+//     return view('pages.customer-login');
+// });
+
+
+Route::get('customer-login', [AuthController::class, 'login'])->name('customerLogin');
+Route::post('customer-login', [AuthController::class, 'login'])->name('customerLogin');

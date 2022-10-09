@@ -10,7 +10,7 @@
 
                 <div class="col-md-6 col-sm-6 col-4">
                     <div class="text-right pr-lg-4">
-                        <a class="btn btn-link mr-2 text-dark" href="/customer-login">Login</a>
+                        <a class="btn btn-link mr-2 text-dark" href="{{ route('customerLogin') }}">Login</a>
 
                         <a class="btn btn-success hidden-xs" href="#" role="button"><i class="fa fa-user-circle-o text-white" aria-hidden="true"></i> Join as a Leader</a>
                     </div>

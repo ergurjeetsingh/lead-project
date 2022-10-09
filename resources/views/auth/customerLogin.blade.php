@@ -8,13 +8,26 @@
                 <h2 class="text-center">Login To Lead With Us</h2>
                 <div class="box-login mt-4">
                     <h2 class="text-center mb-3 mt-3"><i class="fa fa-unlock-alt"></i></h2>
-                    <form action="#" method="post">
+                    @include('layouts.alerts.errors')             
+                    @include('layouts.alerts.success')     
+                    <form role="form" method="POST" action="{{ route('customerLogin') }}">
+                    @csrf
                         <div class="form-group">
-                            <input type="text" name="customer_username" class="form-control" placeholder="Username" autocomplete="off" required>
+                            <input type="text" name="email" class="form-control" placeholder="Username" autocomplete="off" autofocus required>
+                            @if ($errors->has('email'))
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>  
+                            @endif  
                         </div>
                         <div class="form-group">
-                            <input type="password" name="customer_pswrd" class="form-control" placeholder="Password" id="pass" required>
+                            <input type="password" name="password" class="form-control" placeholder="Password" id="pass" required>
                             <i class="fa fa-eye" id="show"></i>
+                            @if ($errors->has('password'))
+                            <span class="invalid-feedback d-block" role="alert">
+                                <strong>{{ $errors->first('password') }}</strong>
+                            </span>  
+                            @endif   
                         </div>
                         <div class="form-group">
                             <input type="submit" name="login" class="btn btn-success btn-block" value="Login" required>
