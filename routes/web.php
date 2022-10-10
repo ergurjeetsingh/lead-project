@@ -36,3 +36,9 @@ Route::get('/customer-register', function () {
 
 Route::get('customer-login', [AuthController::class, 'login'])->name('customerLogin');
 Route::post('customer-login', [AuthController::class, 'login'])->name('customerLogin');
+Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('forget-Password', [AuthController::class, 'forgetPassword'])->name('forgetPassword');
+Route::post('forget-Password', [AuthController::class, 'forgetPassword'])->name('forgetPassword');
+
+Route::get('customer-register', [AuthController::class, 'register'])->name('customerRegister');
+Route::post('customer-register', [AuthController::class, 'register'])->name('customerRegister');

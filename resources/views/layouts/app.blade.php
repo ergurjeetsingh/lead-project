@@ -29,16 +29,7 @@
 </head>
 
 <body>	
-<!-- 
-        @auth()             
-            @include('layouts.navbars.navbar')        
-            @include('layouts.navbars.sidebar')            
-            @yield('content')            
-            
-            @else
-            
-            
-            @endauth -->
+
         @include('layouts.navbars.header')        
         @yield('content')            
         

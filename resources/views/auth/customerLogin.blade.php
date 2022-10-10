@@ -34,11 +34,11 @@
                         </div>
                     </form>
                     <div class="text-center mt-3">
-                        <a href="/customer-register">
+                        <a href="{{ route('customerRegister') }}">
                             <i class="fa fa-user-plus"></i> Sign Up
                         </a>
                         &nbsp; &nbsp; | &nbsp; &nbsp;
-                        <a href="#" data-toggle="modal" data-target="#forgot-modal">
+                        <a href="{{ route('forgetPassword') }}" >
                             <i class="fa fa-meh-o"></i> Forgotten Password?
                         </a>
                     </div>
