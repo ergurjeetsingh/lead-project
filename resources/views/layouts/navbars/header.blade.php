@@ -15,7 +15,7 @@
                         @else
                             <a class="btn btn-link mr-2 text-dark" href="{{ route('customerLogin') }}">Login</a>
                         @endif
-                        <a class="btn btn-success hidden-xs" href="#" role="button"><i class="fa fa-user-circle-o text-white" aria-hidden="true"></i> Join as a Leader</a>
+                        <a class="btn btn-success hidden-xs" href="/join-leader" role="button"><i class="fa fa-user-circle-o text-white" aria-hidden="true"></i> Join as a Leader</a>
                     </div>
                 </div>
             </div>

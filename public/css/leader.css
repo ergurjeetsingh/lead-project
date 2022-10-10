@@ -52,9 +52,9 @@
     line-height: 30px;
     font-weight: 600;
 }
-.content-wrapper{
+/* .content-wrapper{
     padding:5% 0 5% 0;
-}
+} */
 .items{
     overflow-y: scroll;
     height: 100vh;
@@ -343,7 +343,7 @@
 }
 /**********************************************************
     How It Works
-    ************************************************************/
+     ************************************************************/
     #register-sec .register-card .square-icon i{
         font-size: 30px;
         line-height: 40px;
@@ -351,4 +351,57 @@
     }
     .grouped-input-wrapper {
         flex-basis: 25em;
+    }
+/**********************************************************
+    professional register
+ ************************************************************/
+    .create-leader-acc-section {
+        background-color: #f3f3f6;
+        padding: 60px 0;
+    }
+
+    .create-leader-acc-form {
+        padding: 0 17%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .create-leader-acc-form {
+            padding: 0;
+        }
+    }
+
+    div #loading_ajax {
+        min-height: 150px;
+        padding: 30px;
+        border-radius: 5px;
+    }
+
+    /* .modal-content {
+        padding: 0;
+    } */
+
+    /* Mark input boxes that gets an error on validation: */
+    input.invalid {
+        border: #fd6969 solid 1px;
+    }
+
+    /* Hide all steps by default: */
+    .tab {
+        display: block;
+    }
+
+    /* Make circles that indicate the steps of the form: */
+    .step {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: none;
+        opacity: 0;
+    }
+
+    .step.active {
+        opacity: 1;
     }

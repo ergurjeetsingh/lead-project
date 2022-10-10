@@ -32,6 +32,12 @@ Route::get('/contact', function () {
 Route::get('/customer-register', function () {
     return view('pages.customer-register');
 });
+Route::get('/join-leader', function () {
+    return view('pages.join-leader');
+});
+Route::get('/leader-register', function () {
+    return view('pages.leader-register');
+});
 
 
 Route::get('customer-login', [AuthController::class, 'login'])->name('customerLogin');

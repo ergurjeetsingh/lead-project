@@ -3,7 +3,7 @@
 @section('content')    
 <div class="content-wrapper">
 <div class="container">
-   <div class="row ">
+   <div class="row py-5">
       <div class="col-3"></div>
       <div class="col-6">
       <h2 class="text-center mb-4">Sign Up To Lead With Us</h2>
