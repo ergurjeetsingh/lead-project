@@ -38,6 +38,9 @@ Route::get('/join-leader', function () {
 Route::get('/leader-register', function () {
     return view('pages.leader-register');
 });
+Route::get('/dashboard-leader', function () {
+    return view('pages.dashboard-leader');
+});
 
 
 Route::get('customer-login', [AuthController::class, 'login'])->name('customerLogin');
