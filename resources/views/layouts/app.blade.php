@@ -24,7 +24,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <!-- Admin css file -->
+    
+    <link href="{{ asset('css/app-saas.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('css/icons.min.css') }}" type="text/css" rel="stylesheet">
     @stack('css')
 </head>
 

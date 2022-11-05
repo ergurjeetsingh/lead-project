@@ -25,12 +25,12 @@
                 </div> -->
                 <div class="pl-1 pl-lg-2 d-flex align-items-center grouped-btn-wrapper">
                   <div class="large-search-button">
-                    <a href="/customer-login" id="submit_btn" type="button" class="btn btn-success btn-lg create-user-button">Login</a>
-                  </div>
+                    <a href="{{route('customerLogin')}}" id="submit_btn" type="button" class="btn btn-success btn-lg create-user-button">Login</a>
+                  </div>                  
                 </div>
                 <div class="pl-1 pl-lg-2 d-flex align-items-center grouped-btn-wrapper">
                   <div class="large-search-button">
-                    <a href="/leader-register" id="submit_btn" type="button" class="btn btn-success btn-lg create-user-button">Sign up</a>
+                    <a href="{{route('leaderRegister')}}" id="submit_btn" type="button" class="btn btn-success btn-lg create-user-button">Sign up</a>
                   </div>
                 </div>
               </div>

@@ -10,8 +10,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Models\User;
-
-
+use App\Models\Leader;
 
 class AuthController extends Controller
 {
@@ -27,11 +26,15 @@ class AuthController extends Controller
                 ]
             )->validate();
             
-            if ( \Auth::attempt( $request->only('email','password') ) ) {
-                return Redirect::to( route('dashboard') );
+            if ( \Auth::attempt( $request->only('email','password') ) ) {                
+                if (auth()->user()->role_id == '3') {
+                    return Redirect::to( route('leaderDashboard') );
+                }else{
+                    return Redirect::to( route('dashboard') );                    
+                }
             }
-            
-            return Redirect::to( route('customerLogin') )->witherrors('Login detials are not valid');            
+
+            return Redirect::to( route('customerLogin') )->witherrors('Login detials are not valid');
 
         }else{
             $data = array(
@@ -72,6 +75,55 @@ class AuthController extends Controller
                 'title' => "Register"
             );
             return view('auth.customerRegister')->with($data);
+        }
+    }
+
+    public function registerLeader( Request $request ){
+
+        if ($request->all()) {            
+            Validator::make(
+                $request->all(),
+                [                    
+                    'email' => 'required|max:200|email|unique:users,email',
+                    'name' => 'required|string|max:250',
+                    'password' => 'required',
+                    'password_confirmation' => 'required|same:password',
+                    'phone' => 'required|max:20',
+                ]
+            )->validate();
+            
+            $data = array(
+                'email' => $request->email,            
+                'name' => $request->name,
+                'password' => Hash::make($request->password),
+                'phone' => $request->phone,
+                'role_id' => '3',
+            );                        
+    
+            $user = User::create($data);
+
+
+            $data = array(
+                'user_id' => $user->id,
+                'company_name' => $request->company_name,                
+                'service_area' => 'within',
+                'miles' => $request->miles,
+                'zipcode' => $request->zipcode,
+                'ziplat' => $request->ziplat,
+                'ziplong' => $request->ziplong,
+                'phone' => $request->phone,
+                'website' => $request->website,                
+            );                        
+    
+            Leader::create($data);
+
+            return Redirect::to( route('customerLogin') )->withsuccess('Leader registered successfully');
+
+        }else{
+            $data = array(
+                'title' => "Register"
+            );
+            return view('auth.leaderRegister')->with($data);
         }
     }
 

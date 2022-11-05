@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Front\LeaderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,19 +36,34 @@ Route::get('/customer-register', function () {
 Route::get('/join-leader', function () {
     return view('pages.join-leader');
 });
-Route::get('/leader-register', function () {
-    return view('pages.leader-register');
-});
+// Route::get('/leader-register', function () {
+//     return view('pages.leader-register');
+// });
 Route::get('/dashboard-leader', function () {
     return view('pages.dashboard-leader');
 });
+Route::get('/admin-register', function () {
+    return view('adminpages.adminregister');
+});
+Route::get('/admin-login', function () {
+    return view('adminpages.adminLogin');
+});
+
+Route::get('/admin-dashboard', function () {
+    return view('adminpages.adminDashboard');
+});
 
 
-Route::get('customer-login', [AuthController::class, 'login'])->name('customerLogin');
-Route::post('customer-login', [AuthController::class, 'login'])->name('customerLogin');
+Route::get('login', [AuthController::class, 'login'])->name('customerLogin');
+Route::post('login', [AuthController::class, 'login'])->name('customerLogin');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('forget-Password', [AuthController::class, 'forgetPassword'])->name('forgetPassword');
 Route::post('forget-Password', [AuthController::class, 'forgetPassword'])->name('forgetPassword');
 
 Route::get('customer-register', [AuthController::class, 'register'])->name('customerRegister');
 Route::post('customer-register', [AuthController::class, 'register'])->name('customerRegister');
+
+Route::get('leader-register', [AuthController::class, 'registerLeader'])->name('leaderRegister');
+Route::post('leader-register', [AuthController::class, 'registerLeader'])->name('leaderRegister');
+
+Route::get('dashboard-leader', [LeaderController::class, 'index'])->name('leaderDashboard');
