@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Front\LeaderController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,10 +54,15 @@ Route::get('/admin-login', function () {
 Route::get('/admin-dashboard', function () {
     return view('adminpages.adminDashboard');
 });
+Route::get('/service-questions', function () {
+    return view('admin.services.service-questions');
+});
 
 
 Route::get('login', [AuthController::class, 'login'])->name('customerLogin');
 Route::post('login', [AuthController::class, 'login'])->name('customerLogin');
+Route::get('adminLogin', [AuthController::class, 'adminLogin'])->name('adminLogin');
+Route::post('adminLogin', [AuthController::class, 'adminLogin'])->name('adminLogin');
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('forget-Password', [AuthController::class, 'forgetPassword'])->name('forgetPassword');
 Route::post('forget-Password', [AuthController::class, 'forgetPassword'])->name('forgetPassword');
@@ -67,3 +74,11 @@ Route::get('leader-register', [AuthController::class, 'registerLeader'])->name('
 Route::post('leader-register', [AuthController::class, 'registerLeader'])->name('leaderRegister');
 
 Route::get('dashboard-leader', [LeaderController::class, 'index'])->name('leaderDashboard');
+
+Route::get('admin-dashboard', [DashboardController::class, 'index'])->name('adminDashboard');
+Route::get('admin-services', [ServiceController::class, 'index'])->name('adminServices');
+
+Route::get('service-save/{id?}', [ServiceController::class, 'createService'])->name('adminCreateService');
+Route::post('service-save/{id?}', [ServiceController::class, 'createService'])->name('adminCreateService');
+
+Route::get('service-delete/{id?}', [ServiceController::class, 'deleteService'])->name('adminDeleteService');

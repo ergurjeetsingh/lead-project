@@ -14,6 +14,36 @@ use App\Models\Leader;
 
 class AuthController extends Controller
 {
+
+    public function adminLogin( Request $request ){
+
+        if ($request->all()) {            
+            Validator::make(
+                $request->all(),
+                [                    
+                    'email' => 'required|email|max:250',
+                    'password' => 'required|max:250',
+                ]
+            )->validate();
+            
+            if ( \Auth::attempt( $request->only('email','password') ) ) {                
+                if (auth()->user()->role_id == '1') {
+                    return Redirect::to( route('adminDashboard') );
+                }else{
+                    Auth::logout();
+                    return Redirect::to( route('adminLogin') )->witherrors('Only admin User can Login here');                    
+                }
+            }
+
+            return Redirect::to( route('adminLogin') )->witherrors('Login detials are not valid');
+
+        }else{
+            $data = array(
+                'title' => "Login"
+            );
+            return view('auth.adminLogin')->with($data);
+        }
+    }
     
     public function login( Request $request ){
 
