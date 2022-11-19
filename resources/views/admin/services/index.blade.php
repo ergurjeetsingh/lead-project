@@ -48,7 +48,7 @@
                                 <td>{{$value->service_name}}</td>
                                 <td>{{$value->service_category}}</td>                                
                                 <td>
-                                    <span class="btn btn-warning">Questions</span>
+                                    <a href="/service-questions" class="btn btn-warning">Questions</span>
                                     <a href="{{route('adminCreateService',['id'=>$value->id])}}" class="btn btn-primary">Edit</a>
                                     <a href="{{route('adminDeleteService',['id'=>$value->id])}}" class="btn btn-danger">Delete</a>
                                 </td>
